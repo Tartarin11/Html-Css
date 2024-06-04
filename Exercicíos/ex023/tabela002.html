@@ -19,6 +19,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -29,6 +30,16 @@
         tfoot, thead {
             background-color: rgb(49, 49, 49);
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;  
+            background-color: rgb(49, 49, 49);
+        }
+
+        tbody > tr:nth-child(even) { /*dá pra usar 2n, 2n-1 e odd (par) e even (impar)*/
+            background-color: lightgray;
         }
 
         .num {
